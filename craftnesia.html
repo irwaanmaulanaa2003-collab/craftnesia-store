@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craftnesia - Minecraft Server Ranks Store</title>
+    <meta name="description" content="Elegant Minecraft server store for purchasing ranks on Craftnesia. Join our community and play on play.craftnesia.my.id">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .hero {
+            background: linear-gradient(135deg, #075985 0%, #0c4a6e 50%, #082f49 100%);
+            min-height: 80vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/278a0ebc-cfe3-4a31-82a4-e0b3605fcdea.png') center/cover no-repeat;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            animation: slideInFromLeft 1s ease-out;
+        }
+        .hero p {
+            animation: slideInFromRight 1s ease-out 0.3s both;
+        }
+        .hero .buttons {
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        .navbar {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .product-card {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #f97316, #ef4444);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #ea580c, #dc2626);
+        }
+        .btn-secondary {
+            background: #5865f2;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+        .btn-secondary:hover {
+            opacity: 0.9;
+        }
+        .about-section {
+            background: rgba(51, 65, 85, 0.5);
+            padding: 4rem 0;
+        }
+        .testimonial {
+            background: rgba(30, 41, 59, 0.8);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 1rem 0;
+        }
+        footer {
+            background: #0f172a;
+            border-top: 1px solid rgba(148, 163, 184, 0.2);
+            padding: 4rem 0;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        .stat-item {
+            text-align: center;
+            margin: 1rem;
+        }
+        .stat-item h3 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #f97316;
+        }
+        .social-links a {
+            margin: 0 1rem;
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideInFromRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            .grid-cols-3 {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header / Hero Section -->
+    <header id="hero" class="hero flex items-center justify-center px-4 md:px-8">
+        <div class="hero-content text-center text-white">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">CRAFTNESIA STORE</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Elevate Your Minecraft Experience with Exclusive Server Ranks. Discover a world of adventure, creativity, and endless possibilities on our community-driven server.</p>
+            <div class="buttons mt-8 flex flex-col md:flex-row justify-center gap-4">
+                <a href="#products" class="btn-primary inline-block">Explore Ranks</a>
+                <a href="https://discord.gg/craftnesia" class="btn-secondary inline-block">Join Our Discord Community</a>
+            </div>
+            <div class="mt-12 text-lg"> 
+                play.craftnesia.my.id (Java)
+                play.craftnesia.my.id:19132 (Bedrock)
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <main id="products" class="py-16 px-4 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">Our Minecraft Server Ranks</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product 1 -->
+            <div class="product-card p-6 rounded-lg">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/54d83f54-0f6b-44a2-9cd4-c4b8335d19b6.png" alt="Three-dimensional isometric view of a stone block with glowing effects representing the base rank in a dark themed Minecraft server store interface" class="w-full h-48 object-cover rounded-md mb-4" onerror="this.style.display='none';" />
+                <h3 class="text-2xl font-semibold mb-2">Stone Rank</h3>
+                <p class="mb-4">The entry-level rank for new adventurers. Get basic perks and access to starter areas.</p>
+                <p class="text-xl font-bold text-orange-400 mb-4">$5.99</p>
+                <div class="flex flex-col gap-2">
+                    <a href="https://wa.me/1234567890?text=Hello%20Craftnesia,%20I%20want%20to%20buy%20Stone%20Rank.%20Please%20provide%20payment%20details." class="btn-primary text-center">Buy on WhatsApp</a>
+                    <a href="https://discord.com/channels/@me/1234567890" class="btn-secondary text-center">Buy on Discord</a>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card p-6 rounded-lg">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cb898128-4848-43f5-8977-0e8a63fe61c9.png" alt="Stylized illustration of coal ore block in a futuristic cosmic theme for a premium Minecraft rank badge display" class="w-full h-48 object-cover rounded-md mb-4" onerror="this.style.display='none';" />
+                <h3 class="text-2xl font-semibold mb-2">Coal Rank</h3>
+                <p class="mb-4">Unlock advanced crafting recipes and access to exclusive coal mines.</p>
+                <p class="text-xl font-bold text-orange-400 mb-4">$9.99</p>
+                <div class="flex flex-col gap-2">
+                    <a href="https://wa.me/1234567890?text=Hello%20Craftnesia,%20I%20want%20to%20buy%20Coal%20Rank.%20Please%20provide%20payment%20details." class="btn-primary text-center">Buy on WhatsApp</a>
+                    <a href="https://discord.com/channels/@me/1234567890" class="btn-secondary text-center">Buy on Discord</a>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card p-6 rounded-lg">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2fef6c35-cd37-4d9a-9462-a6641cedee88.png" alt="Polished iron ingot pixel art design transformed into a sleek badge for high-tier Minecraft server roles" class="w-full h-48 object-cover rounded-md mb-4" onerror="this.style.display='none';" />
+                <h3 class="text-2xl font-semibold mb-2">Iron Rank</h3>
+                <p class="mb-4">Gain priority in queues, custom armor kits, and more building tools.</p>
+                <p class="text-xl font-bold text-orange-400 mb-4">$14.99</p>
+                <div class="flex flex-col gap-2">
+                    <a href="https://wa.me/1234567890?text=Hello%20Craftnesia,%20I%20want%20to%20buy%20Iron%20Rank.%20Please%20provide%20payment%20details." class="btn-primary text-center">Buy on WhatsApp</a>
+                    <a href="https://discord.com/channels/@me/1234567890" class="btn-secondary text-center">Buy on Discord</a>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card p-6 rounded-lg">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6cab2e64-b15b-4345-950a-4ba1b3ca495d.png" alt="Radiant gold block texture mapped to a modern abstract logo for elite Minecraft player ranks" class="w-full h-48 object-cover rounded-md mb-4" onerror="this.style.display='none';" />
+                <h3 class="text-2xl font-semibold mb-2">Gold Rank</h3>
+                <p class="mb-4">Enhanced cosmetics, private plots, and gold-level support.</p>
+                <p class="text-xl font-bold text-orange-400 mb-4">$19.99</p>
+                <div class="flex flex-col gap-2">
+                    <a href="https://wa.me/1234567890?text=Hello%20Craftnesia,%20I%20want%20to%20buy%20Gold%20Rank.%20Please%20provide%20payment%20details." class="btn-primary text-center">Buy on WhatsApp</a>
+                    <a href="https://discord.com/channels/@me/1234567890" class="btn-secondary text-center">Buy on Discord</a>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card p-6 rounded-lg">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1c0386b9-4f63-4d64-a98c-2e5b8491b772.png" alt="Sparkling diamond ore in crystal clear water illustration for the top-tier rank in a luxurious Minecraft server store" class="w-full h-48 object-cover rounded-md mb-4" onerror="this.style.display='none';" />
+                <h3 class="text-2xl font-semibold mb-2">Diamond Rank</h3>
+                <p class="mb-4">All Gold perks plus teleportation spells and events access.</p>
+                <p class="text-xl font-bold text-orange-400 mb-4">$24.99</p>
+                <div class="flex flex-col gap-2">
+                    <a href="https://wa.me/1234567890?text=Hello%20Craftnesia,%20I%20want%20to%20buy%20Diamond%20Rank.%20Please%20provide%20payment%20details." class="btn-primary text-center">Buy on WhatsApp</a>
+                    <a href="https://discord.com/channels/@me/1234567890" class="btn-secondary text-center">Buy on Discord</a>
+                </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="product-card p-6 rounded-lg">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ec4a01bd-5e1f-42be-b962-520c4707aecd.png" alt="Vivid emerald gem embedded in a mystical forest setting for exclusive high-level Minecraft server ranks" class="w-full h-48 object-cover rounded-md mb-4" onerror="this.style.display='none';" />
+                <h3 class="text-2xl font-semibold mb-2">Emerald Rank</h3>
+                <p class="mb-4">Rare enchantments, boss fight invitations, and premium skins.</p>
+                <p class="text-xl font-bold text-orange-400 mb-4">$29.99</p>
+                <div class="flex flex-col gap-2">
+                    <a href="https://wa.me/1234567890?text=Hello%20Craftnesia,%20I%20want%20to%20buy%20Emerald%20Rank.%20Please%20provide%20payment%20details." class="btn-primary text-center">Buy on WhatsApp</a>
+                    <a href="https://discord.com/channels/@me/1234567890" class="btn-secondary text-center">Buy on Discord</a>
+                </div>
+            </div>
+            <!-- Product 7 -->
+            <div class="product-card p-6 rounded-lg">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9213679a-bdd2-46c6-bb3a-4e5bc18496cb.png" alt="High contrast netherite alloy block glowing in a fiery underworld theme for the ultimate Minecraft rank tier" class="w-full h-48 object-cover rounded-md mb-4" onerror="this.style.display='none';" />
+                <h3 class="text-2xl font-semibold mb-2">Netherite Rank</h3>
+                <p class="mb-4">Invincible gear, portal travel, and legendary quests unlocked.</p>
+                <p class="text-xl font-bold text-orange-400 mb-4">$34.99</p>
+                <div class="flex flex-col gap-2">
+                    <a href="https://wa.me/1234567890?text=Hello%20Craftnesia,%20I%20want%20to%20buy%20Netherite%20Rank.%20Please%20provide%20payment%20details." class="btn-primary text-center">Buy on WhatsApp</a>
+                    <a href="https://discord.com/channels/@me/1234567890" class="btn-secondary text-center">Buy on Discord</a>
+                </div>
+            </div>
+            <!-- Product 8 -->
+            <div class="product-card p-6 rounded-lg">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cb9d85ee-682e-4f31-bb55-d41541d08fbb.png" alt="Golden starburst emblem on a crimson velvet background representing VIP status in a sophisticated Minecraft server store" class="w-full h-48 object-cover rounded-md mb-4" onerror="this.style.display='none';" />
+                <h3 class="text-2xl font-semibold mb-2">VIP Rank</h3>
+                <p class="mb-4">Everything Netherite plus personal assistants and custom events.</p>
+                <p class="text-xl font-bold text-orange-400 mb-4">$49.99</p>
+                <div class="flex flex-col gap-2">
+                    <a href="https://wa.me/1234567890?text=Hello%20Craftnesia,%20I%20want%20to%20buy%20VIP%20Rank.%20Please%20provide%20payment%20details." class="btn-primary text-center">Buy on WhatsApp</a>
+                    <a href="https://discord.com/channels/@me/1234567890" class="btn-secondary text-center">Buy on Discord</a>
+                </div>
+            </div>
+            <!-- Product 9 -->
+            <div class="product-card p-6 rounded-lg">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/84f82897-1e87-4e9d-ad0a-6f70b6072129.png" alt="Majestic trophy silhouette against an astral galaxy backdrop for the founder-level rank in a premium Minecraft universe interface" class="w-full h-48 object-cover rounded-md mb-4" onerror="this.style.display='none';" />
+                <h3 class="text-2xl font-semibold mb-2">Founder Rank</h3>
+                <p class="mb-4">The ultimate rank: VIP perks, server naming rights, and eternal legacy.</p>
+                <p class="text-xl font-bold text-orange-400 mb-4">$99.99</p>
+                <div class="flex flex-col gap-2">
+                    <a href="https://wa.me/1234567890?text=Hello%20Craftnesia,%20I%20want%20to%20buy%20Founder%20Rank.%20Please%20provide%20payment%20details." class="btn-primary text-center">Buy on WhatsApp</a>
+                    <a href="https://discord.com/channels/@me/1234567890" class="btn-secondary text-center">Buy on Discord</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="about-section px-4 max-w-7xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8">About Craftnesia</h2>
+        <p class="text-lg mb-8 max-w-3xl mx-auto">Craftnesia is a vibrant Minecraft server community dedicated to creativity, exploration, and fun. Whether you're building epic structures, battling mobs, or collaborating with friends, our server offers a lag-free experience with optimized performance. Our ranks are designed to enhance your gameplay, offering exclusive perks and access to elevate your adventures in the world of Minecraft.</p>
+        <div class="stats">
+            <div class="stat-item">
+                <h3>10,000+</h3>
+                <p>Active Players</p>
+            </div>
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>Built Structures</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Server Uptime</p>
+            </div>
+        </div>
+    </section>
+    </footer>
+    <script>
+        // Enhanced JavaScript for interactivity
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('bg-opacity-100', window.scrollY > 0);
+        });
+
+        // Smooth scrolling for navbar links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            if (link.href.includes('discord.gg') || link.href.includes('wa.me')) {
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+            }
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
